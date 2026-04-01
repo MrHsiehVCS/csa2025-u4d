@@ -5,11 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>csa</groupId>
-  <artifactId>u10pp</artifactId>
+  <artifactId>u4cpp</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>u9pp</name>
-  <url>https://github.com/dhoffmanvillage/u10pp.git</url>
+  <name>u4cpp</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
