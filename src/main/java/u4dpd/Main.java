@@ -1,10 +1,10 @@
-package u4dpd;
+package u4dpp;
 import java.util.*;
 
 public class Main 
 {
     public static void main(String[] args) {
-        System.out.println("Hi! This is the u4dpd project. Have fun! :)");
+        System.out.println("Hi! This is the u4dpp project. Have fun! :)");
 
         // Use this space to test your code. 
         // Some example test cases are given below

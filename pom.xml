@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>csa</groupId>
-  <artifactId>u4cpp</artifactId>
+  <artifactId>u4dpp</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>u4cpp</name>
+  <name>u4dpp</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

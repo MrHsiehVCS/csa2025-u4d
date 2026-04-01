@@ -1,4 +1,4 @@
-# u4cpp - Programming Project
+# u4dpp - Programming Project
 
 In this programming project you will implement various sorting algorithms, a recursive binary search, recursive math functions, and a recursive palindrome checker.
 
