@@ -1,6 +1,6 @@
 # u4cpp - Programming Project
 
-In this programming project you are going create a recursive program that solves Sudoku, as well as solve a few smaller recursive programming challenges.
+In this programming project you will implement various sorting algorithms, a recursive binary search, recursive math functions, and a recursive palindrome checker.
 
 ## Allowed Resources for the Project
 
@@ -9,7 +9,6 @@ You are allowed to use any of the following to help you with your project:
 - any online Java API documentation
 - Group discssion in class or online
 - Online concept tutorials (Examples: *How does Recursion Work?* *How to Parse a String into an int in Java?*)
-- Tutorials on what a Sudoku or Nubrix puzzle is and how it works
 
 You are not permitted to use any of the following:
 
@@ -22,12 +21,13 @@ You are not permitted to use any of the following:
 - All code commented: 2 points
 - No public methods/attributes besides the ones specified (additional private methods/attributes are encouraged): 2 point
 - All code is DRY (Don't repeat yourself): 2 points
-- If recursive code is not recursive: minus 15 points. (binarysearch, mergesort, recursive classes)
-- Test Cases: 20 points (45 test cases, so .444 points per question aka 4/9ths of a point)
+- If recursive code is not recursive: minus 15 points. (binarySearch, mergeSort, RecursiveMath, and RecursivePalindromeChecker must all be recursive)
+- Test Cases: 20 points (~60 test cases, so 1/3 of a point per question)
+Total: 30 points
 
 
 ## Part A - Sort.java
-In class, we discussed the algorithms behind two different types of sorts: selection sort and insertion sort. Create a static class Sorts that has the following static methods:
+Implement the following sorting algorithms in a static class `Sort`. You will implement selection sort, insertion sort, and merge sort:
 
 - `int[] selectionSort(int[] x)`: Returns the array x sorted in ascending order using a selection sort
 - `int[] insertionSort(int[] x)`: Returns the array x sorted in ascending order using an insertion sort

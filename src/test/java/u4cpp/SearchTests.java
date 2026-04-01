@@ -96,6 +96,38 @@ public class SearchTests {
         assertEquals(28, Search.binarySearch(data, 300));
     }
 
+    @Test
+    public void binarySearch_WithNegativeNumbers_returnsCorrect() {
+        int[] data = {-100, -50, -25, -10, 0, 10, 25, 50, 100};
+        assertEquals(0, Search.binarySearch(data, -100));
+        assertEquals(1, Search.binarySearch(data, -50));
+        assertEquals(3, Search.binarySearch(data, -10));
+        assertEquals(4, Search.binarySearch(data, 0));
+        assertEquals(5, Search.binarySearch(data, 10));
+        assertEquals(8, Search.binarySearch(data, 100));
+    }
+
+    @Test
+    public void binarySearch_RequestedValueNotInArray_returnsNegativeOne() {
+        int[] data = {-100, -50, -25, -10, 0, 10, 25, 50, 100};
+        assertEquals(-1, Search.binarySearch(data, -99));
+        assertEquals(-1, Search.binarySearch(data, -1));
+        assertEquals(-1, Search.binarySearch(data, 1));
+        assertEquals(-1, Search.binarySearch(data, 101));
+    }
+
+    @Test
+    public void binarySearch_LargeArray_returnsCorrect() {
+        int[] data = new int[1000];
+        for (int i = 0; i < 1000; i++) {
+            data[i] = i * 2;
+        }
+        assertEquals(0, Search.binarySearch(data, 0));
+        assertEquals(500, Search.binarySearch(data, 1000));
+        assertEquals(999, Search.binarySearch(data, 1998));
+        assertEquals(-1, Search.binarySearch(data, 1));
+    }
+
 
 
     @Test

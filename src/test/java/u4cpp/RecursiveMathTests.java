@@ -9,6 +9,17 @@ public class RecursiveMathTests {
 
     private static final float EPSILON = 0.0001f;
 
+    @Test
+    public void pow_edgeCases_returnsCorrectValues() {
+        assertAll(
+            () -> assertEquals(1.0, RecursiveMath.pow(0, 0), EPSILON),
+            () -> assertEquals(0.0, RecursiveMath.pow(0, 5), EPSILON),
+            () -> assertEquals(1.0, RecursiveMath.pow(1, 1000), EPSILON),
+            () -> assertEquals(1.0, RecursiveMath.pow(999, 0), EPSILON),
+            () -> assertEquals(0.0, RecursiveMath.pow(0, 100), EPSILON)
+        );
+    }
+
     @Test 
     public void pow_positive_returnsCorrectValues() {
         assertAll(

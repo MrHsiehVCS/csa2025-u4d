@@ -42,4 +42,19 @@ public class RecursivePalindromeCheckerTests {
             () -> assertFalse(RecursivePalindromeChecker.isPalindrome("abcddefghhhhhiijkkkklmnonmlkkkkjiihhhhgfeddcba"))
         );
     }
+
+    @Test
+    public void verylongPalindrome_returnsTrue() {
+        String longPalindrome = "abcdefghijihgfedcba";
+        assertTrue(RecursivePalindromeChecker.isPalindrome(longPalindrome));
+        
+        String evenLonger = "abcdefghijklkjihgfedcba";
+        assertTrue(RecursivePalindromeChecker.isPalindrome(evenLonger));
+    }
+
+    @Test
+    public void verylongNonPalindrome_returnsFalse() {
+        String longNonPalindrome = "abcdefghijihgfedcbb";
+        assertFalse(RecursivePalindromeChecker.isPalindrome(longNonPalindrome));
+    }
 }

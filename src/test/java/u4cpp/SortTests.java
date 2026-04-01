@@ -256,5 +256,141 @@ public class SortTests {
 
         assertEquals(correctList, list);
     }
+
+    @Test
+    public void selectionSort_WhenArrayHasAllIdenticalElements_ShouldReturnArrayUnchanged()
+    {
+        int[] identicalArray = {5, 5, 5, 5, 5};
+        int[] sortedArray = Sort.selectionSort(identicalArray);
+
+        assertArrayEquals(identicalArray, sortedArray);
+    }
+
+    @Test
+    public void insertionSort_WhenArrayHasAllIdenticalElements_ShouldReturnArrayUnchanged()
+    {
+        int[] identicalArray = {7, 7, 7, 7};
+        int[] sortedArray = Sort.insertionSort(identicalArray);
+
+        assertArrayEquals(identicalArray, sortedArray);
+    }
+
+    @Test
+    public void mergeSort_WhenListHasAllIdenticalElements_ShouldReturnListUnchanged()
+    {
+        ArrayList<Integer> identicalList = new ArrayList<>();
+        identicalList.add(3);
+        identicalList.add(3);
+        identicalList.add(3);
+
+        ArrayList<Integer> sortedList = Sort.mergeSort(identicalList);
+        assertEquals(identicalList, sortedList);
+    }
+
+    @Test
+    public void selectionSort_WhenArrayAlreadySorted_ShouldReturnCorrectlySortedArray()
+    {
+        int[] alreadySorted = {-5, -2, 0, 3, 8};
+        int[] sortedArray = Sort.selectionSort(alreadySorted);
+
+        int[] expected = {-5, -2, 0, 3, 8};
+        assertArrayEquals(expected, sortedArray);
+    }
+
+    @Test
+    public void insertionSort_WhenArrayReverseSorted_ShouldReturnCorrectlySortedArray()
+    {
+        int[] reverseSorted = {9, 7, 5, 3, 1};
+        int[] sortedArray = Sort.insertionSort(reverseSorted);
+
+        int[] expected = {1, 3, 5, 7, 9};
+        assertArrayEquals(expected, sortedArray);
+    }
+
+    @Test
+    public void mergeSort_WhenListHasOnlyNegativeNumbers_ShouldReturnCorrectlySortedList()
+    {
+        ArrayList<Integer> negativeList = new ArrayList<>();
+        negativeList.add(-5);
+        negativeList.add(-1);
+        negativeList.add(-10);
+        negativeList.add(-3);
+
+        ArrayList<Integer> sortedList = Sort.mergeSort(negativeList);
+
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(-10);
+        expected.add(-5);
+        expected.add(-3);
+        expected.add(-1);
+
+        assertEquals(expected, sortedList);
+    }
+
+    @Test
+    public void selectionSort_WhenListHasAllIdenticalElements_ShouldReturnListUnchanged()
+    {
+        ArrayList<Integer> identicalList = new ArrayList<>();
+        identicalList.add(5);
+        identicalList.add(5);
+        identicalList.add(5);
+
+        ArrayList<Integer> sortedList = Sort.selectionSort(identicalList);
+        assertEquals(identicalList, sortedList);
+    }
+
+    @Test
+    public void selectionSort_WhenListAlreadySortedDescending_ShouldReturnCorrectlySortedList()
+    {
+        ArrayList<Integer> descendingList = new ArrayList<>();
+        descendingList.add(8);
+        descendingList.add(3);
+        descendingList.add(0);
+        descendingList.add(-2);
+        descendingList.add(-5);
+
+        ArrayList<Integer> sortedList = Sort.selectionSort(descendingList);
+
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(8);
+        expected.add(3);
+        expected.add(0);
+        expected.add(-2);
+        expected.add(-5);
+        assertEquals(expected, sortedList);
+    }
+
+    @Test
+    public void insertionSort_WhenListHasAllIdenticalElements_ShouldReturnListUnchanged()
+    {
+        ArrayList<Integer> identicalList = new ArrayList<>();
+        identicalList.add(7);
+        identicalList.add(7);
+        identicalList.add(7);
+
+        ArrayList<Integer> sortedList = Sort.insertionSort(identicalList);
+        assertEquals(identicalList, sortedList);
+    }
+
+    @Test
+    public void insertionSort_WhenListIsAscendingShouldReturnDescending_ShouldReturnCorrectly()
+    {
+        ArrayList<Integer> ascendingList = new ArrayList<>();
+        ascendingList.add(1);
+        ascendingList.add(3);
+        ascendingList.add(5);
+        ascendingList.add(7);
+        ascendingList.add(9);
+
+        ArrayList<Integer> sortedList = Sort.insertionSort(ascendingList);
+
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(9);
+        expected.add(7);
+        expected.add(5);
+        expected.add(3);
+        expected.add(1);
+        assertEquals(expected, sortedList);
+    }
     
 }
